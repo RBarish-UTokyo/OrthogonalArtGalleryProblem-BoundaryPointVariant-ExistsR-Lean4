@@ -1,0 +1,172 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "The orthogonal boundary-point art gallery problem is ∃ℝ-complete, in Lean 4"
+  description: >-
+    A Lean 4 formalization of material in a forthcoming manuscript entitled "The Orthogonal Art
+    Gallery Problem is ∃ℝ-complete". A Lean 4 and Mathlib proof, for an explicit single-tape
+    Turing machine model, that deciding whether an orthogonal simple polygon (every edge
+    horizontal or vertical) with rational corners can be guarded by g points of its boundary,
+    which together must see the whole closed polygon (the boundary-point variant), is ∃ℝ-complete
+    under polynomial-time many-one reductions. The orthogonal point-point and point-boundary
+    variants are the subject of the author's earlier entry PALOMAR-2026-11-01-000004 v1, whose
+    definitions this entry reuses unchanged. For general polygons the boundary-point variant is
+    treated by Abrahamsen, Adamaszek and Miltzow (J. ACM 2021); orthogonal polygons are not. The
+    hardness proof is a new construction: the ETR-INV instance is compiled to rows of fourteen
+    relation profiles, and the polygon is a hub with one floor slot per variable and one door per
+    row, behind each of which hangs an orthogonal wing (a staircase corridor ending in an
+    arithmetic room) whose boundary guards copy the slot values through the door and enforce the
+    row relation. Its finite visibility facts are kernel-checked certificates on the wing charts,
+    parametric in the size and value parameters. The proofs use only the axioms propext,
+    Classical.choice and Quot.sound.
+  authors:
+    - "Robert D. Barish"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Robert D. Barish"
+
+classification:
+  arxiv: [cs.CG, cs.CC]
+  msc2020: [68U05, 68Q17, 14P10, 68V20]
+
+sources:
+  - title: "The Orthogonal Art Gallery Problem is ∃ℝ-complete"
+    authors:
+      - "Robert D. Barish"
+    type: paper
+    location: "Forthcoming manuscript; not included in this repository."
+    relationship: formalizes
+    note: >-
+      The hub-and-wings construction and the hardness theorem for the orthogonal boundary-point
+      variant.
+    author_endorsement: participated
+  - title: "The Art Gallery Problem is ∃ℝ-complete"
+    authors:
+      - "Mikkel Abrahamsen"
+      - "Anna Adamaszek"
+      - "Tillmann Miltzow"
+    type: paper
+    location: "Journal of the ACM 69(1), Article 4 (2021); preliminary version STOC 2018. The paper is not included in this repository."
+    relationship: formalizes
+    note: >-
+      Used: the definition of the boundary-point variant, the reduction ETR → ETR-INV (§4) and the
+      membership argument (§3, Theorem 13), here in a form with 2g variables. Orthogonal polygons
+      are not treated in the paper.
+    license: "unknown"
+    author_endorsement: not-contacted
+
+related_formalizations:
+  - id: "https://palomar-registry.org/entry?id=PALOMAR-2026-11-01-000004&version=1"
+    relationship: builds-on
+    note: >-
+      Robert D. Barish, "The orthogonal art gallery problem is ∃ℝ-complete (point-point and
+      point-boundary), in Lean 4", Palomar, PALOMAR-2026-11-01-000004 v1. That entry proves the
+      orthogonal point-point and point-boundary variants; this entry proves the third,
+      boundary-point, variant with the same definitions. The 143 Lean files of this repository
+      outside ArtGallery/Orthogonal/BoundaryPoint/ are byte-identical copies of its files of the
+      same path (definitions, membership, orthogonality test, three helper files of its
+      construction, and the libraries); its docs/PROVENANCE.md records their origins.
+  - id: "https://palomar-registry.org/entry?id=PALOMAR-2026-10-27-000025&version=1"
+    relationship: builds-on
+    note: >-
+      Robert D. Barish, "The Art Gallery Problem is ∃ℝ-complete: point-point, boundary-point and
+      point-boundary variants, in Lean 4", Palomar, PALOMAR-2026-10-27-000025 v1. Through
+      PALOMAR-2026-11-01-000004, the source of the ETR reductions, the membership argument and
+      the geometry and visibility library.
+  - id: "https://palomar-registry.org/entry?id=PALOMAR-2026-10-02-000013&version=1"
+    relationship: builds-on
+    note: >-
+      Robert D. Barish, "NP-completeness of SAT, 3-SAT and their variants (the Cook–Levin
+      theorem) in Lean 4", Palomar, PALOMAR-2026-10-02-000013 v1. Its machine model, classes and
+      part of its Complexity library are reused byte-identically; the statement inlines its
+      machine model.
+  - id: "https://palomar-registry.org/entry?id=PALOMAR-2026-10-09-000010&version=1"
+    relationship: builds-on
+    note: >-
+      Robert D. Barish, "MaxSNP-completeness and APX-completeness of MAX-3-SAT and 3-OCCURRENCE
+      MAX-3-SAT (the PCP theorem and hardness of approximation) in Lean 4", Palomar,
+      PALOMAR-2026-10-09-000010 v1. Its polynomial-time framework PT/ and the register language
+      of Complexity/Reg are reused byte-identically.
+  - id: "https://palomar-registry.org/entry?id=PALOMAR-2026-10-05-000003&version=2"
+    relationship: adapts
+    note: >-
+      Robert D. Barish, "Linear-Time Triangulation of Simple Polygons (Chazelle's Algorithm) in
+      Lean 4", Palomar, PALOMAR-2026-10-05-000003 v2. The polygon definitions of its
+      specification and its planar-geometry, Jordan-curve, triangulation-existence and
+      affine-invariance files are adapted (namespace renamed, provenance note added to each file).
+
+status:
+  scope: >-
+    Proved: the compared theorem for the definitions of Challenge.lean (∃ℝ-completeness of the
+    orthogonal boundary-point art gallery problem). On the way: membership in ∃ℝ by formulas in
+    the 2g guard coordinates together with an orthogonality test; the compilation of ETR-INV into
+    rows of fourteen relation profiles; the hub and wing polygons, their simplicity and
+    orthogonality; role ownership and soundness; the wing and hub covers with kernel-checked
+    certificates; polynomial time of the reduction.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: [propext, Classical.choice, Quot.sound]
+  main_results:
+    - declaration: ArtGallery.agpOrthBoundaryPoint_erComplete
+      file: ArtGallery/Orthogonal/BoundaryPoint/Main.lean
+      sorry_count: 0
+      axioms: [propext, Classical.choice, Quot.sound]
+      comparator_config: comparator.json
+
+automation:
+  methods:
+    - method: agent
+      models: ["Claude Opus 5.5 (Anthropic)"]
+      framework: "AI coding agents"
+      tool_setup: >-
+        Claude Opus 5.5 (Anthropic) was used, as agents under the direction of the author, both for the
+        Lean formalization and to assist with the documentation. The author set the task, the
+        target statements and the requirements. Tools: Lean v4.35.0-rc2 and Lake, Mathlib,
+        development programs with exact rational arithmetic (used to design and validate the
+        construction and to generate its data and certificate files; not part of this
+        repository), the toolchain's lake comparator and independent kernels.
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not tracked"
+        hardware: "cloud container"
+      prompting_notes: "n/a"
+  spend_usd: "not tracked"
+  notes: >-
+    The author directed the work. Claude Opus 5.5 (Anthropic) assisted with the Lean definitions,
+    statements, proofs, the development-time certificate generators (not part of this
+    repository; the generated Lean files are checked by the kernel), and the documentation
+    (README.md, this file and the Challenge.lean header).
+    Files reused from the author's earlier entries are described in README.md.
+
+fidelity:
+  divergences: |-
+    - Machine model, polynomial time and reductions are those of PALOMAR-2026-10-02-000013: deterministic single-tape Turing machines over {blank, 0, 1, separator}, time = number of steps, polynomial bounds c * (n + 1)^k, polynomial-time many-one (Karp) reductions. ∃ℝ is the class of languages that reduce to ETR; invariance under other machine models is not proved.
+    - ETR formulas are quantifier-free formulas with constants 0, 1, operations +, −, · and relations =, <, ≤ under ¬, ∧, ∨, read existentially; variable indices are coded in unary. Art gallery instances are coded with numerators, denominators and g in binary.
+    - Polygons are lists of corners; simple means at least three distinct corners and any two distinct edges meeting exactly in common endpoints (collinear consecutive corners allowed); orthogonal means every edge is horizontal or vertical. The region is the boundary plus the bounded components of its complement; seeing means the closed segment lies in the region.
+    - AGPOrthBoundaryPoint asks for exactly g points of the boundary of an orthogonal simple polygon that together see every point of the closed region; this is equivalent to at most g, since the boundary is infinite and guards can be added. It is the restriction of the boundary-point variant of [AAM] to orthogonal polygons, with the definitions of PALOMAR-2026-11-01-000004.
+    - The hardness construction (hub and wings) is our own (the forthcoming manuscript) and uses explicit coordinates designed for the formalization.
+
+review:
+  status: agent-reviewed
+  reviewers:
+    - "Claude Opus 5.5 (Anthropic)"
+  notes: >-
+    The Challenge statement was checked against the definitions of the sources and of
+    PALOMAR-2026-11-01-000004 during the AI-assisted development. The proof is checked by the Lean
+    kernel, and Comparator verifies that the solution proves the challenge statement using only
+    the permitted axioms (README.md, section Checking). No human mathematical review or Palomar
+    editorial review is asserted.
+
+alignment:
+  namespace: "ArtGallery"
+  statements:
+    - source: "[Manuscript] the orthogonal boundary-point art gallery problem is ∃ℝ-complete"
+      lean: "ArtGallery.agpOrthBoundaryPoint_erComplete"
+      module: "Solution"
+      status: proved
+      note: "Hub-and-wings construction of the forthcoming manuscript; membership as in [AAM] §3 with an orthogonality test."
+
+acknowledgements: >-
+  Mathlib and the Lean community; the Lean FRO for Comparator, lean4export and the toolchain's
+  independent kernels.

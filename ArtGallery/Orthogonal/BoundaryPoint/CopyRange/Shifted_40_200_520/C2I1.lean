@@ -1,0 +1,120 @@
+module
+
+public import ArtGallery.Orthogonal.BoundaryPoint.CopyRange
+public import ArtGallery.Orthogonal.BoundaryPoint.RegChain
+public import ArtGallery.Orthogonal.BoundaryPoint.WingOrder.Shifted_40_200_520
+public import ArtGallery.Orthogonal.BoundaryPoint.CopyRange.Shifted_40_200_520.C2Defs
+
+/-! Range data of profile `Shifted_40_200_520`: `C2I1` (generated). -/
+@[expose] public section
+namespace ArtGallery.Orthogonal.BoundaryPoint.CopyRange.Shifted_40_200_520
+open MarginCert RegisterTable RegisterOrder KronCert IndexedWing ShapeRefs RoomCoordinates CopyChannel CopyMatch CopyRange
+open WingOrder.Shifted_40_200_520
+set_option maxRecDepth 200000
+set_option maxHeartbeats 0
+set_option Elab.async false
+
+noncomputable def c2L2L : Ex := (.lit ([[[34789474720000],[-320640320000]],[],[[12812800]]] : P3))
+
+noncomputable def c2L2X22N : Ex := c2N35
+noncomputable def c2L2X22D : Ex := c2D35
+noncomputable def c2L2X22C : Ex := (.lit ([[[25025]]] : P3))
+
+theorem c2L2X22cof : RegCert.auto (.sub (.mul c2L2X22D c2L2X22C) c2L2L)=true := by decide +kernel
+
+noncomputable def c2L2X61N : Ex := c2N1213
+noncomputable def c2L2X61D : Ex := c2D1213
+noncomputable def c2L2X61C : Ex := (.lit ([[[17394737360000],[-160320160000]],[],[[6406400]]] : P3))
+
+theorem c2L2X61cof : RegCert.auto (.sub (.mul c2L2X61D c2L2X61C) c2L2L)=true := by decide +kernel
+
+noncomputable def c2L2X71N : Ex := (.lit ([[[29254225]],[],[[8]]] : P3))
+noncomputable def c2L2X71D : Ex := (.lit ([[[50050]]] : P3))
+noncomputable def c2L2X71C : Ex := (.lit ([[[695094400],[-6406400]],[],[[256]]] : P3))
+
+theorem c2L2X71cof : RegCert.auto (.sub (.mul c2L2X71D c2L2X71C) c2L2L)=true := by decide +kernel
+
+noncomputable def c2L2Y2N : Ex := (.lit ([[[-3]]] : P3))
+noncomputable def c2L2Y2D : Ex := (.lit ([[[1]]] : P3))
+noncomputable def c2L2Y2C : Ex := (.lit ([[[34789474720000],[-320640320000]],[],[[12812800]]] : P3))
+
+theorem c2L2Y2cof : RegCert.auto (.sub (.mul c2L2Y2D c2L2Y2C) c2L2L)=true := by decide +kernel
+
+noncomputable def c2L2Y20N : Ex := c2N1198
+noncomputable def c2L2Y20D : Ex := c2D1198
+noncomputable def c2L2Y20C : Ex := (.lit ([[[34789474720000],[-320640320000]],[],[[12812800]]] : P3))
+
+theorem c2L2Y20cof : RegCert.auto (.sub (.mul c2L2Y20D c2L2Y20C) c2L2L)=true := by decide +kernel
+
+noncomputable def c2L2Y29N : Ex := c2N525
+noncomputable def c2L2Y29D : Ex := c2D525
+noncomputable def c2L2Y29C : Ex := (.lit ([[[200200]]] : P3))
+
+theorem c2L2Y29cof : RegCert.auto (.sub (.mul c2L2Y29D c2L2Y29C) c2L2L)=true := by decide +kernel
+
+noncomputable def c2L2P : Ex := (.sp ⟨2,0,[(82,6,SP.join 8000 [0x7772a4d0008000028000000b671f784434000000103000009aa69acf1d0140020000060008b5575697063e680040008040ec36e10cc0895cc5000000080e41d4261e79a37d17e801000001])]⟩)
+
+theorem c2L2ok : signed (1/65:ℚ) (2599/5005:ℚ) (67979/130130:ℚ) (detX (.mul c2L2X71N c2L2X71C) (.mul c2L2Y2N c2L2Y2C) (.mul c2L2X61N c2L2X61C) (.mul c2L2Y20N c2L2Y20C) (.mul c2L2X22N c2L2X22C) (.mul c2L2Y29N c2L2Y29C)) c2L2P (-1)=true := by decide +kernel
+
+noncomputable def c2L2K : Ex := (.lit ([[[1]]] : P3))
+
+theorem c2L2Lne : RegCert.auto (.sub (.mul c2L2L c2L2K) (.mul c2L2X22D (.lit [[[25025]]])))=true := by decide +kernel
+
+
+
+
+noncomputable def c2deepL : Ex := (.sp ⟨1,0,[(66,9,SP.join 8000 [0x64000000000b00000000015d1f000000014000000098bd900004000424000014ced2fe000000000480000042a7f9af8010001080000d0773f4b87000000010026d843d1f668000400041ece920f45b67080000000039d038d5b9405f1c01000106]),(112,9,SP.join 8000 [0x186f969aed3d04f5e00000006000000004937273a4f56510e00008000828000000f874f11d20f3c88c38000000001400000094544b68dc91bc1000000200020800002adcfeca9902ee811400000000000400000293148d1270118d2118000080008180008bab1ae5283fb82843560000000000c08bab1ae5283fb82843560000002000205d9902730fc780c68844f98000000000002])]⟩)
+
+noncomputable def c2deepY30N : Ex := c2N220
+noncomputable def c2deepY30D : Ex := c2D220
+noncomputable def c2deepY30C : Ex := (.lit ([[],[],[[1]]] : P3))
+
+theorem c2deepY30cof : RegCert.auto (.sub (.mul c2deepY30D c2deepY30C) c2deepL)=true := by decide +kernel
+
+noncomputable def c2deeponeN : Ex := (.lit ([[[1]]] : P3))
+noncomputable def c2deeponeD : Ex := (.lit ([[[1]]] : P3))
+noncomputable def c2deeponeC : Ex := (.sp ⟨1,0,[(66,9,SP.join 8000 [0x64000000000b00000000015d1f000000014000000098bd900004000424000014ced2fe000000000480000042a7f9af8010001080000d0773f4b87000000010026d843d1f668000400041ece920f45b67080000000039d038d5b9405f1c01000106]),(112,9,SP.join 8000 [0x186f969aed3d04f5e00000006000000004937273a4f56510e00008000828000000f874f11d20f3c88c38000000001400000094544b68dc91bc1000000200020800002adcfeca9902ee811400000000000400000293148d1270118d2118000080008180008bab1ae5283fb82843560000000000c08bab1ae5283fb82843560000002000205d9902730fc780c68844f98000000000002])]⟩)
+
+theorem c2deeponecof : RegCert.auto (.sub (.mul c2deeponeD c2deeponeC) c2deepL)=true := by decide +kernel
+
+noncomputable def c2deepvDN : Ex := (.lit ([[[50050]]] : P3))
+noncomputable def c2deepvDD : Ex := (.lit ([[],[],[[1]]] : P3))
+noncomputable def c2deepvDC : Ex := (.sp ⟨1,0,[(66,9,SP.join 8000 [0x64000000000900000000015d1f000000010000000098bd90000400041c000014ced2fe000000000380000042a7f9af8010001060000d0773f4b8700000000c026d843d1f6680004000416ce920f45b67080000000029d038d5b9405f1c01000104]),(112,9,SP.join 8000 [0x186f969aed3d04f5e00000004000000004937273a4f56510e00008000818000000f874f11d20f3c88c38000000000c00000094544b68dc91bc1000000200020400002adcfeca9902ee811400000000000200000293148d1270118d2118000080008080008bab1ae5283fb82843560000000000408bab1ae5283fb82843560000002000201d9902730fc780c68844f98000000000000])]⟩)
+
+theorem c2deepvDcof : RegCert.auto (.sub (.mul c2deepvDD c2deepvDC) c2deepL)=true := by decide +kernel
+
+noncomputable def c2deepP : Ex := (.sp ⟨3,0,[(66,8,SP.join 8000 [0x4b000000200002e000000075d41000040000580000e51c5800000000008a802063822203e58010000150003e7d7a14880000000229354894d9925bc00040000502bbe3bdb2c000000800109fa2c512d23e400001000212]),(115,16,SP.join 8000 [0x13d444cf04ea6787800000113000000000b9991348e581b16d4801000013000000002334b02d9fb325499000000011200000032e366154ddfba065da000100001200000002d9b0a191adb11e458200100021100000571cf16778070641e4f0dc000001110002383ace50c05f6dee95b1666010000110000022889c0c5d3908e30aac00010002100011950dafd484860dace74eb80000001100d5750fdce43ee910a10ff83cc0010000100000001d284fdb1084e7ce800000000030f008c5d8256ddb05df5b31052e500100020fbf3bc4f7e447998946a23bd69e00000010f00023e2e77bdb13cc638e97b0000000030ec721465f1428dbed1107343ee000100020e0c8f057ab7ad7309076d98000000000030d]),(146,12,SP.join 8000 [0x7d5e174fc838b065bf16e097903d80200001e00000d2fd7fb52db405f6b4808eb084280000000438000de60eb1514718112404e4e381828ec00080000700000bdd0b34349839886866e7a810a65600100020d001b42ba44c2d9b059486875b438974de600000021a106d9236c55b8bbaff981126015d617700004000034000006906cb3d04bb6b0eb661fb0371c0000000186001945a1778e7063a9d8bac571dcc7e2c000100020c8d5df7cdcea44d9b752089ecfa51e8c5000000002180007434007407ec1188331b180ee118000000000c2f1a3528ad6168ced534169152afb5fd00000080010599022547127f635d263dfe7a92a293e90000000030a]),(173,12,SP.join 8000 [0x742f07a4d6dc61f7d28657eff41d1fb7060000400003000008112fec85e62f0a39c9796dd9ae52858780000000010b000b280d697505b741ab0c224a7c9183d724b800000400002c00013a7b8b61f38eabe071f69808ca54bc4e100000100020a00982b9583f004bb4d4f6e766c97147452a274500000000428ce7f574c00a7fb6db00a474b1f8f6078dceff9c000100000a000006880db4daa9714257b7ff6706a5d17040000000000c2400976872ecc1c49fea2b3493267930a92af80000001000209d911844bc0092cb6213847aa201fbaec71dab000000000042400fe6cc26ca27d2a1447e0f6ee65284b31800000000000308fd9bce3e5c79b4f9781a2c97ae7dd761d3e000000004000820bc20dd817ae042afff1b7474a1f886bfe9340000000000307]),(207,14,SP.join 8000 [0x18f046076c1daea31847f8fb4298fb406c9dcc180000010000090000003ff81006e5f4ae674aff2c2c31058090b7c05e00000000000108000012ddf11ffbc94b38a7813f83d25f811599f594b4000000010000080000004ab4062b8d4d706e011aaf8c96dc3359bfa2f0c000000100020700018df7bbe0386eb90a22063197234a23764c595ddb50000000000107009ca19e746957435f5611cd7c303bedbbea53497871e0000001000007000000097dd9ea4bfb378670300d9b93ae00dd1ee9c000000000000306000006d6ada4257c253b8e9f77c1b1753d152b2521400000000000020600af8f10719e675cb6efc88ca0e346fcd008fcb63070000000000001065ad3d5b5d7a5f77a119a9c458a058a1bf75ebc5a47c00000000100000600007310db0fc6e13024934240da77df090a80c480000000000000030500663c71168b095a0747d10833f3d9efc8bb9bb70000000000000002056569d7d5fe6c29c6885269391c1c904fa3ffcf81200000000001000105f7405660642f9c88a3427b686cffe10275209b9c890000000000000204]),(240,9,SP.join 8000 [0xfdb604d5f0205d7f5cbd44cc6e7f8784a36ca84f740000000000000000500000250ea8bc30d4392701974d18abf9ea107541a4b33c7ef8000000000000082000088c0303319155763c1fa64e4844ef60b86e33b9eaf63407000000000400001000000022539b1e49fa345a76c250a06e78e83aaf25d2c08400000000000000040600000e8c6f3e565a8b3057555b2bfed23e6cdf3b87d297f200000000000100010300018aa1497ae657ff7f40eb49096006dd49272ec43059844000000000000000018001d18de7cacb51660aeaab657fda47cd9be770fa52fe4000000000000000008080c550a4bd732bffbfa075a484b0036ea4939762182cc22000000000000020002054e82b7492d409792de0770e8f265d1930236a44cfbe11a40000000000000000002])]⟩)
+
+theorem c2deepok : signed (1/65:ℚ) (2599/5005:ℚ) (67979/130130:ℚ) (linX (.mul c2deeponeN c2deeponeC) [(1,(.mul c2deepvDN c2deepvDC)),(-1,(.mul c2deepY30N c2deepY30C)),(1,(.mul c2deeponeN c2deeponeC))]) c2deepP (1)=true := by decide +kernel
+
+noncomputable def c2deepK : Ex := (.lit ([[[1]]] : P3))
+
+theorem c2deepLne : RegCert.auto (.sub (.mul c2deepL c2deepK) (.mul c2deepY30D c2deepvDD))=true := by decide +kernel
+
+
+
+
+noncomputable def c2H43L : Ex := (.lit ([[[173773600],[-1601600]],[],[[64]]] : P3))
+
+noncomputable def c2H43Y29N : Ex := c2N525
+noncomputable def c2H43Y29D : Ex := c2D525
+noncomputable def c2H43Y29C : Ex := (.lit ([[[1]]] : P3))
+
+theorem c2H43Y29cof : RegCert.auto (.sub (.mul c2H43Y29D c2H43Y29C) c2H43L)=true := by decide +kernel
+
+noncomputable def c2H43oneN : Ex := (.lit ([[[1]]] : P3))
+noncomputable def c2H43oneD : Ex := (.lit ([[[1]]] : P3))
+noncomputable def c2H43oneC : Ex := (.lit ([[[173773600],[-1601600]],[],[[64]]] : P3))
+
+theorem c2H43onecof : RegCert.auto (.sub (.mul c2H43oneD c2H43oneC) c2H43L)=true := by decide +kernel
+
+noncomputable def c2H43P : Ex := (.sp ⟨2,0,[(53,9,SP.join 8000 [0x800100000400000000754e0400000c0000061c1000000010200004f854040040000080000b32bf73800001010012fc0891cf04000004012a9e9c080010002001e5d70cdb0400000040229b6f9f215800000000])]⟩)
+
+theorem c2H43ok : signed (1/65:ℚ) (2599/5005:ℚ) (67979/130130:ℚ) (linX (.mul c2H43oneN c2H43oneC) [(3,(.mul c2H43Y29N c2H43Y29C)),(-7,(.mul c2H43oneN c2H43oneC))]) c2H43P (1)=true := by decide +kernel
+
+noncomputable def c2H43K : Ex := (.lit ([[[1]]] : P3))
+
+theorem c2H43Lne : RegCert.auto (.sub (.mul c2H43L c2H43K) c2H43Y29D)=true := by decide +kernel
+
+end ArtGallery.Orthogonal.BoundaryPoint.CopyRange.Shifted_40_200_520
+end
